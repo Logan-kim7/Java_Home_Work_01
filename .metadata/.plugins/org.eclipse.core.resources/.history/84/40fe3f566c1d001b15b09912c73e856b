@@ -1,0 +1,10 @@
+package com.jm.book.service;
+
+import java.util.Scanner;
+
+public class BookServiceV1 {
+
+	
+	private Scanner scan;
+	private String strBCode;
+}

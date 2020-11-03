@@ -1,0 +1,36 @@
+package com.jm.pay.exec;
+
+import java.util.Scanner;
+
+public class PayWorkEx_01 {
+	
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String pay = new String();
+		 
+		System.out.println("금액을 입력해주세요(QUIT:종료) 한번에 500만원까지만 가능 >>");
+		pay = scan.nextLine();
+		try {
+			int intpay = Integer.valueOf(pay);
+			
+			if(intpay == 0 || intpay >0) {
+				System.out.println("값이 부정확합니다 다시입력해주세요");
+				
+				return;
+			}
+			
+		} catch ( NumberFormatException e) {
+			// TODO: handle exception
+			System.out.println("숫자만 입력가능");
+		}
+		int paper = 0;
+		int checkup = 0;
+		
+		paper = (int)(pay / 50000);
+		
+		
+		
+		
+	}
+}

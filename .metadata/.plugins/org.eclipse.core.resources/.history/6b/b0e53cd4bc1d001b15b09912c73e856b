@@ -1,0 +1,31 @@
+package java_HomeWork_006;
+
+public class SortEx_02 {
+
+	public static void main(String[] args) {
+
+		int[] intArr = new int[] { 10, 9, 20, 6, 7, 30, 22, 78 };
+
+		System.out.println("정렬 되기 전 리스트");
+		for (int arr : intArr) {
+			System.out.printf("%d\t", arr);
+		}
+		System.out.println();
+
+		int count = 0;
+		for (int j = 0; j < intArr.length - 1; j++) {
+			count++;
+			if (intArr[j] > intArr[j + 1]) {
+				int temp = intArr[j + 1];
+				intArr[j + 1] = intArr[j];
+				intArr[j] = temp;
+
+			}
+		}
+	}
+		private void sysout() {
+			// TODO Auto-generated method stub
+
+		}
+	
+}

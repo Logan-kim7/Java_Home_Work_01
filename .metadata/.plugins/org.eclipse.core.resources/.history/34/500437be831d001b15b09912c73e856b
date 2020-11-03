@@ -1,0 +1,143 @@
+package com.jm.student.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.jm.student.domain.StudentVO;
+
+public class StudentServiceImplV1 implements StudentService {
+	
+	private Scanner scan;
+	private String stdFile;
+	private List<StudentVO> stdList;
+	private StudentVO sVO;
+	
+	
+	public StudentServiceImplV1() {
+		this.scan = scan;
+		this.stdFile = stdFile;
+		this.stdList = new ArrayList<StudentVO>();
+		
+		
+	}
+	
+	@Override
+	public boolean inputNum() {
+		sVO = new StudentVO();
+		while(true) {
+			
+			System.out.println("학번(QUIT:종료)");
+			String strInput = scan.nextLine();
+			
+			if(strInput.equals("QUIT")) {
+				return false;
+			}
+			if(strInput.length() < 8) {
+				System.out.println("학번은 8자리 숫자로 입력하세요");
+				continue;
+			}
+			if(stdList.stream().filter(vo->vo.getNum().equals(strInput)).count() > 0) {
+				System.out.println("이미 저장된 학번입니다.");
+			}
+			
+				sVO.setNum(strInput);
+				break;
+			
+			
+		}
+		
+		return true;
+	}
+
+	@Override
+	public boolean inputName() {
+		while(true) {
+			System.out.println("이름(QUIT:종료)");
+			String strInput = scan.nextLine();
+			
+			if(strInput.equals("QUIT")) {
+				return false;
+			}
+			if(strInput.isEmpty()) {
+				System.out.println("이름은 반드시 입력해야 합니다.");
+				continue;
+			}
+			sVO.setName(strInput);
+			break;
+		}
+		return true;
+	}
+
+	@Override
+	public boolean inputDept() {
+		while(true) {
+			System.out.println("학과(QUIT:종료)");
+			String strInput = scan.nextLine();
+			
+			if(strInput.equals("QUIT")) {
+				return false;
+			}
+			
+			if(strInput.isEmpty()) {
+				System.out.println("학과명은 반드시 입력해야 합니다");
+				continue;
+			}
+			sVO.setDept(strInput);
+			break;
+		}
+		return true;
+	}
+
+	@Override
+	public boolean inputGrade() {
+		while(true) {
+			System.out.println("학년(QUIT:종료)");
+			String strInput = scan.nextLine();
+			
+			
+			if(strInput.equals("QUIT")) {
+				return false;
+			}
+			
+			int intGrade = 0;
+			try {
+				intGrade = Integer.valueOf(strInput);
+				
+			} catch (Exception e) {
+				System.out.println("학년은 숫자로만 입력해야 합니다.");
+				continue;			}
+		
+		
+		if(intGrade < 1 || intGrade > 4 ) {
+			System.out.println("학년은 1 ~ 4범위여야 합니다.");
+			continue;
+		}
+		sVO.setGrade(intGrade);
+		break;
+	}
+		return true;
+	}
+	@Override
+	public boolean inputTel() {
+		
+		while(true) {
+			
+		return false;
+	}
+
+	@Override
+	public boolean saveStudent() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean loadStudent() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+
+}

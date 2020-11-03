@@ -1,0 +1,17 @@
+package com.jm.student;
+
+import javax.annotation.Generated;
+import javax.xml.ws.ServiceMode;
+
+
+public class StudentEx_01 {
+
+	
+	private static final int ST_NUM  = 0;
+	private static final int ST_NAME  = 1;
+	private static final int ST_DEPT  = 2;
+	private static final int ST_GRADE  = 3;
+	private static final int ST_TEL = 4;
+	
+	
+}

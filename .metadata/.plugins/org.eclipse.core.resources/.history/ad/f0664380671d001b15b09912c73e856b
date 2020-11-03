@@ -1,0 +1,20 @@
+package com.jm.book.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.jm.book.domain.BookVO;
+
+public class JueService {
+	
+	
+	private List<BookVO> bookList;
+	private Scanner scan = new Scanner(System.in);
+	private BookVO bookVO = new BookVO();
+	
+	public JueService() {
+		bookList = new ArrayList<>();
+	}
+
+}

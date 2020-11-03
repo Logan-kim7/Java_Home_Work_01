@@ -1,0 +1,26 @@
+package com.jm.game.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BowllGameService {
+	
+	private List<Integer> frames;
+	
+	// 인스턴스 생성시 게임 new start
+	public BowllGameService() {
+		frames = new ArrayList<Integer>();
+		
+	}
+	// 볼을 던진 횟수만큼 호출
+	// 매개변수로 받은 핀 갯수를 frames 리스트에 추가
+	public void rolling(int pins) {
+		frames.add(pins);
+	}
+	
+	
+	public int getScore() {
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.jm.pay.exec;
+
+public class PayWorkEx_02 extends PayWorkEx_01 {
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.jm.student.service;
+
+public class StudentServiceImplV1 {
+
+}

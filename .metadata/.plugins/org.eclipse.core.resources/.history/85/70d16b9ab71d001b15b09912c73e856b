@@ -1,0 +1,17 @@
+package com.jm.pay.exec;
+
+import java.util.Scanner;
+
+public class PayWorkEx_02 extends PayWorkEx_01 {
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("금액을 입력해주세요 >>>>>: ");
+		String pay = scan.nextLine();
+		
+		Integer intpay = Integer.valueOf(pay);
+		
+	}
+
+}
